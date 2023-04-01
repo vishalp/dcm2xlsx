@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dcm2xlsx"
+version = "2023.04.01"
+description = "Convert DICOM files to OOXML spreadsheets."
+readme = "README.md"
+requires-python = ">=3.6"
+license = {file = "LICENSE.txt"}
+keywords = ["DICOM", "Excel", "imaging", "spreadsheet"]
+authors = [
+  {name = "Vishal Patel"}
+]
+classifiers = [
+  "Development Status :: 7 - Inactive",
+  "Intended Audience :: Healthcare Industry",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only"
+]
+dependencies = [
+  "pandas",
+  "pydicom",
+  "pylibjpeg",
+  "pylibjpeg-libjpeg",
+  "XlsxWriter"
+]
+
+[project.urls]
+homepage = "https://github.com/vishalp/dcm2xlsx"
+repository = "https://github.com/vishalp/dcm2xlsx.git"
+
+[project.scripts]
+dcm2xlsx = "dcm2xlsx.dcm2xlsx:main"
+
+[project.gui-scripts]
+dcm2xlsxGUI = "dcm2xlsx.dcm2xlsxGUI:main"
